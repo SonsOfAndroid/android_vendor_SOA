@@ -126,7 +126,7 @@ ifeq ($(RELEASE),true)
     SOA_VERSION := "SonsOfAndroid-JB-v"$(SOA_VERSION_MAJOR).$(SOA_VERSION_MINOR)-$(SOA_VERSION_TAG)
 else
     SOA_VERSION := "SonsOfAndroid-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
-endiff
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.SOA.version=$(SOA_VERSION) \

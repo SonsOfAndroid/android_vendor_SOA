@@ -1,11 +1,5 @@
 # Inherit common SOA stuff
-$(call inherit-product, vendor/soa/config/common.mk)
-
-# Bring in all audio files
-include frameworks/base/data/sounds/NewAudio.mk
-
-# Include SOA audio files
-include vendor/soa/config/soa_audio.mk
+$(call inherit-product, vendor/soa/config/common_full.mk)
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \

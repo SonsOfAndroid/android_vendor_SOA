@@ -1,5 +1,5 @@
 # Inherit common SOA stuff
-$(call inherit-product, vendor/SOA/config/common.mk)
+$(call inherit-product, vendor/soa/config/common.mk)
 
 # Bring in all audio files
 include frameworks/base/data/sounds/NewAudio.mk
@@ -11,12 +11,11 @@ include frameworks/base/data/sounds/AudioPackageNewWave.mk
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
 # Include SOA audio files
-include vendor/SOA/config/SOA_audio.mk
+include vendor/soa/config/soa_audio.mk
 
 # Optional SOA packages
 PRODUCT_PACKAGES += \
     HoloSpiralWallpaper \
-    MagicSmokeWallpapers \
     NoiseField \
     Galaxy4 \
     LiveWallpapers \

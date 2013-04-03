@@ -1,7 +1,5 @@
 #!/bin/bash
-# Common functions for SOA otatools
 #
-# cdesai
 
 if [ ! "$BUILD_WITH_COLORS" = "0" ];
 then

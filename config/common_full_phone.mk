@@ -1,5 +1,5 @@
 # Inherit common SOA stuff
-$(call inherit-product, vendor/SOA/config/common_full.mk)
+$(call inherit-product, vendor/soa/config/common_full.mk)
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -15,3 +15,7 @@ PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
 
 
+ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
+    PRODUCT_COPY_FILES += \
+        vendor/soa/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
+endif

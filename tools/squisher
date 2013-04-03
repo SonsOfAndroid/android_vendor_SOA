@@ -1,10 +1,7 @@
 #!/bin/bash
 #
-# Squish a SOA otapackage for distribution
-# cyanogen
-#
 
-. $ANDROID_BUILD_TOP/vendor/SOA/tools/functions
+. $ANDROID_BUILD_TOP/vendor/soa/tools/functions
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -31,9 +28,9 @@ if [ ! -f "$OTAPACKAGE" ]; then
 fi
 
 # Determine what to name the new package
-MODVERSION=`sed -n -e'/ro\.SOA\.version/s/^.*=//p' $OUT/system/build.prop`
+MODVERSION=`sed -n -e'/ro\.soa\.version/s/^.*=//p' $OUT/system/build.prop`
 echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
-OUTFILE=$OUT/SOA-$MODVERSION.zip
+OUTFILE=$OUT/soa-$MODVERSION.zip
 
 ln -f $OTAPACKAGE $OUTFILE
 
